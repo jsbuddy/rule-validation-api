@@ -4,6 +4,9 @@
   "description": "A simple rule validation API",
   "main": "src/index.js",
   "type": "module",
+  "engines": {
+    "node": ">=14"
+  },
   "scripts": {
     "dev": "cross-env DEBUG=log,error nodemon",
     "start": "cross-env DEBUG=log,error node --es-module-specifier-resolution=node src/index.js"
