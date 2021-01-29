@@ -10,7 +10,7 @@ export const resolveCondition = (condition, condition_value, field_value) => {
         case 'neq': return field_value !== condition_value;
         case 'gt': return field_value > condition_value;
         case 'gte': return field_value >= condition_value;
-        case 'contains': return field_value.includes(condition_value);
+        case 'contains': return `${ field_value }`.toLowerCase().includes(`${ condition_value }`.toLowerCase());
         default: return false;
     }
 };
